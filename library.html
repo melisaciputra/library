@@ -4,8 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Library</title>
+    <script src="library.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <header>
+        <h1>MY LIBRARY</h1>
+        <button id="addBook">Add a Book</button>
+        <div id="popup">
+            <a id="close-popup">X</a>
+            <form id="addBookModal">
+                <input type="text" id="title" name="title" placeholder="Title">
+                <input type="text" id="author" name="author" placeholder="Author">
+                <input type="number" id="year" min="0" max="2099" placeholder="Year" />
+                <select name="status" id="status">
+                    <option value="read">Read</option>
+                    <option value="unread">Not Read</option>
+                  </select>
+                <label class="rating-label"><strong>My Review</strong>
+                <input
+                    class="rating rating--nojs"
+                    max="5"
+                    step="1"
+                    type="range"
+                    value="3">
+                </label>
+                <input id="addBtn" type="submit" value="Add">  
+            </form>
+        </div>
+
+    </header>
+
 </body>
 </html>
