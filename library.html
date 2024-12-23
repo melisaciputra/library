@@ -11,7 +11,8 @@
     <header>
         <h1>MY LIBRARY</h1>
         <button id="addBook">Add a Book</button>
-        <div id="popup">
+        <div id="overlay" style="display: none;"></div>
+        <div id="popup" style="display:none;">
             <a id="close-popup">X</a>
             <form id="addBookModal">
                 <input type="text" id="title" name="title" placeholder="Title">
@@ -19,21 +20,25 @@
                 <input type="number" id="year" min="0" max="2099" placeholder="Year" />
                 <select name="status" id="status">
                     <option value="read">Read</option>
+                    <option value="reading">Reading</option>
                     <option value="unread">Not Read</option>
                   </select>
                 <label class="rating-label"><strong>My Review</strong>
                 <input
+                id="bookRating"
                     class="rating rating--nojs"
                     max="5"
                     step="1"
                     type="range"
-                    value="3">
+                    >
                 </label>
                 <input id="addBtn" type="submit" value="Add">  
             </form>
         </div>
-
     </header>
+    <section id="library-container">
+
+    </section>
 
 </body>
 </html>

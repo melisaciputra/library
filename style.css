@@ -45,9 +45,9 @@
     isolation: isolate;
   }
 
-
-header{
+header {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 a, button, input[type=submit]{
@@ -58,12 +58,21 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     margin: 50px 0 20px;
 }
-#addBook{
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #8a2be2;
-    color: white;
-    padding: 12px 25px;
-    border: 0;
+
+p {
+  font-family: Arial;
+  border-bottom: 1px solid lightgrey;
+}
+
+#addBook {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #8a2be2;
+  color: white;
+  padding: 12px 25px;
+  border: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
 }
 #addBook:hover{
     background-color: #6d23b3;
@@ -80,6 +89,16 @@ input::-webkit-inner-spin-button {
    -webkit-appearance: none;
 }
 
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  z-index: 1;
+}
+
 #popup {
   position: absolute;
   top: 50%;
@@ -88,9 +107,11 @@ input::-webkit-inner-spin-button {
   background-color: #efefef;
   padding: 20px;
   border: 1px solid darkgrey;
-  box-shadow: 10px 10px 5px #dfdfdf;
+  box-shadow: 10px 10px 50px #353535;
   border-radius: 10px;
+  z-index: 2;
 }
+
 #close-popup {
   text-align: right;
   display: block;
